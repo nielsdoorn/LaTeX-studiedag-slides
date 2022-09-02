@@ -1,0 +1,122 @@
+% LaTeX Beamer theme approximating the style of the Powerpoint templates
+% for Open University of the Netherlands
+% (c) 2015 Jeroen Keiren, Jeroen.Keiren@ou.nl
+%
+% Last change: 13/04/2015
+
+\usepackage[absolute]{textpos}
+
+% Define colours, taken from OU Template in Powerpoint
+%\definecolor{OUred}{rgb}{0.82,0.035,0.13} % old color
+%\definecolor{OUred}{rgb}{218,8,18}
+\definecolor{OUred}{rgb}{0.855,0.031,0.071}
+
+% Use the colors. With the following three, we already get most of what we need
+\setbeamercolor{structure}{fg=OUred}
+\setbeamercolor{titlelike}{parent=structure,fg=white}
+\setbeamercolor{frametitle}{parent=structure, fg=OUred}
+
+% Background canvas for the title frame
+\defbeamertemplate{background canvas}{title frame}
+{
+  \includegraphics[width=1.01\paperwidth,height=1.01\paperheight,keepaspectratio]{images/title-new.png}
+}
+
+% Background canvas for the title frame
+\defbeamertemplate{background canvas}{title frame 169}
+{
+  \includegraphics[width=1.01\paperwidth,height=1.01\paperheight,keepaspectratio]{images/title_169-new.png}
+}
+
+% White background for normal slides
+\defbeamertemplate{background canvas}{ou white}
+{
+  \includegraphics[width=1.01\paperwidth,height=1.01\paperheight,keepaspectratio]{images/bg-white.png}
+}
+
+% White background for normal slides without the curve
+\defbeamertemplate{background canvas}{ou plain}
+{
+%  \includegraphics[width=1.01\paperwidth,height=1.01\paperheight,keepaspectratio]{images/bg-white.png}
+}
+
+
+% Title page
+\setbeamertemplate{title page}{
+	\setlength\parindent{80pt}
+    {
+    %\centering
+    \vspace{150pt}
+    \usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par
+    \medskip
+    \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par
+    \bigskip
+    \usebeamerfont{author}\usebeamercolor[fg]{author}\insertauthor\par
+    \smallskip
+    \usebeamerfont{institute}\usebeamercolor[fg]{institute}\insertinstitute\par
+    \smallskip
+    \usebeamerfont{date}\usebeamercolor[fg]{date}\insertdate\par
+    }
+    \vfill
+    \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
+}
+
+% Background
+\setbeamertemplate{background canvas}[ou white]
+
+% Do not use navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% Template to put page numbers on the left
+\defbeamertemplate{footline}{left frame number}
+{
+  \usebeamerfont{page number in head/foot}
+  \usebeamercolor[fg]{page number in head/foot}
+  \hspace*{4pt}
+  \insertframenumber\,/\,\inserttotalframenumber
+  \hfill
+  {
+  \begin{textblock*}{3.5cm}[1.2,1.4](\paperwidth,\paperheight)
+  \includegraphics[width=3.5cm]{images/OU_Logo_FC-new.png}
+  \end{textblock*}
+  }
+  \vspace{4pt}
+}
+
+% Template to put page numbers on the left
+\defbeamertemplate{footline}{left frame number small logo}
+{
+  \usebeamerfont{page number in head/foot}
+  \usebeamercolor[fg]{page number in head/foot}
+  \hspace*{4pt}
+  \insertframenumber\,/\,\inserttotalframenumber
+  \hfill
+  {
+  \begin{textblock*}{2.5cm}[1.2,1.4](\paperwidth,\paperheight)
+  \includegraphics[width=2.5cm]{images/OU_Logo_FC-new.png}
+  \end{textblock*}
+  }
+  \vspace{4pt}
+}
+
+% Template to put page numbers on the left
+\defbeamertemplate{footline}{left frame number notext}
+{
+  \usebeamerfont{page number in head/foot}
+  \usebeamercolor[fg]{page number in head/foot}
+  \hspace*{4pt}
+  \insertframenumber\,/\,\inserttotalframenumber
+  \hfill
+  {
+  \begin{textblock*}{1.2cm}[1.2,1.4](\paperwidth,\paperheight)
+  \includegraphics[width=.7cm]{images/OU_Logo_FC_notext.pdf}
+  \end{textblock*}
+  }
+  \vspace{4pt}
+}
+
+% Put page numbers on the left
+\setbeamertemplate{footline}[left frame number]
+
+\setbeamercolor{alerted text}{fg=OUred}
+
