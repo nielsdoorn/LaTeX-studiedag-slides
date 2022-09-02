@@ -5,11 +5,11 @@
 \usefonttheme{professionalfonts}
 \usetheme{OU}
 
+%\usepackage[text=confidential]{draftwatermark}
+
 \usepackage{amsmath}
 \usepackage[dutch]{babel}
-%\usepackage{diagram}
 \usepackage{xskak}
-%\usepackage{listings}
 \usepackage{tcolorbox}
 \usepackage{xcolor}
 \usepackage{hyperref}
@@ -92,7 +92,7 @@ There are \textbf{various} possibilities to \emph{highlight}.
 \item 1984: \alert{\LaTeX} door Leslie Lamport
  \begin{itemize}
   \item Uitspraak: la-tech
-  \item \LaTeX-macro's + \TeX % Meestal wordt met de term LaTeX het hele opmaaksysteem bedoeld waar de LaTeX-macro's strikt genomen slechts een klein onderdeel van zijn. (Source: Wikipedia / LaTeX)
+  \item \LaTeX-macro's + \TeX (engine)% Meestal wordt met de term LaTeX het hele opmaaksysteem bedoeld waar de LaTeX-macro's strikt genomen slechts een klein onderdeel van zijn. (Source: Wikipedia / LaTeX)
   \item Open source software; website: \url{https://www.latex-project.org}
   \item .tex broncode $\xrightarrow{\text{pdflatex}}$ document met mooie lay-out (.pdf)
  \end{itemize}\pause
@@ -107,6 +107,9 @@ There are \textbf{various} possibilities to \emph{highlight}.
 
 \end{frame}
 
+\begin{frame}{Wat doet \LaTeX?}
+\LaTeX is een \textit{framework} waarin documenten beginnen met \mintinline{latex}{\documentclass}, uitbreidingen geladen worden met \mintinline{latex}{\packages}, lettertypes op een slimme manier geselecteerd worden (zo dat je bijvoorbeeld \textbf{vetgedrukte} tekst kunt behouden als je het \textit{\textbf{scheefgedrukt}} wilt hebben, pagina's door middel van complexe algoritmes worden gebouwd inclusief ondersteuning voor kopteksten, voetteksten, voetnoten, margenotities, `zwevende' onderdelen et cetera.
+\end{frame}
 
 \section{Waarom \LaTeX?}
 \frame[noframenumbering,plain]{\tableofcontents[currentsection]}
@@ -949,9 +952,9 @@ Leuk hondje \includegraphics[width=3cm]{hond.jpg} en poesje \includegraphics[wid
 \begin{frame}[fragile]{Opdracht: CTAN gebruiken}
 
 \begin{itemize}
-\item Zoek ``watermark'' op CTAN
+\item Zoek ``draftwatermark'' op CTAN
 
-\item Browse door de documentatie en probeer je overleaf document te voorzien met een half transparant watermerk met de tekst ``final''.
+\item Browse door de documentatie en probeer je overleaf document te voorzien met een half transparant watermerk met de tekst ``confidential''.
 \end{itemize}
 
 
