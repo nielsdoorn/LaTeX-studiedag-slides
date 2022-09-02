@@ -470,24 +470,30 @@ De preamble definieert de: documentclass en de packages die we willen gebruiken
 \begin{frame}[fragile]{Heel veel packages}
 Schaakborden? met \verb|\usepackage{xskak}|
   
-\begin{columns}
-\begin{column}{0.35\textwidth}
+ 
+{\footnotesize
 \newchessgame
-\mainline{1.e4 e5 2.Nf3 Nc6 3.Bb5}
-\chessboard
+\mainline{1. e4 e5 2. c3 Nf6 3. Nf3 Nc6 4. d4 exd4 5. e5 Nxe5 6. Nxe5 Bc5 7. cxd4 Bb4+ 8. Bd2 a5 9. Bxb4 axb4 10. Nc4 d5 11. Ne3 Ng4 12. Nxg4 h5 13. Ne3 Qf6 14. b3 Be6 15. Bd3 O-O-O 16. O-O Bg4 17. Nxg4 hxg4 18. Qxg4+ Kb8 19. a3 Rh4 20. Qe2 g6 21. axb4 Rxd4 22. Nc3 Rh8 23. h3 Qg5 24. Nb5 Rxb4 25. Rfe1 c6 26. Nd6 Rxh3 27. Nxf7 Qh4 28. gxh3 Qxh3 29. Qe8+ Kc7 30. Qd8#}
+}
+
+\begin{columns}
+\begin{column}{0.4\textwidth}
+\scalebox{0.6}{\chessboard[showmover=false]}
 \end{column}
-\begin{column}{0.65\textwidth}
+\begin{column}{0.6\textwidth}
 \begin{tcolorbox}
 \begin{footnotesize}
 \begin{minted}{latex}
 \newchessgame
-\mainline{1.e4 e5 2.Nf3 Nc6 3.Bb5}
+\mainline{1. e4 e5 2. c3 Nf6 }
 \chessboard
 \end{minted} 
 \end{footnotesize}
 \end{tcolorbox}
 \end{column}
 \end{columns}
+
+
 \end{frame}
 
 \begin{frame}[fragile]{Heel veel packages}
@@ -560,7 +566,7 @@ def test_myFunc():
 \begin{column}{0.6\textwidth}
 \begin{tcolorbox}
 \begin{footnotesize}
-\begin{verbatim}
+\begin{minted}{latex}
 \faApple
 \faCar
 \faBitcoin
@@ -568,13 +574,13 @@ def test_myFunc():
 \faCut
 \faGoogle
 \faWhatsapp
-\end{verbatim} 
+\end{minted} 
 \end{footnotesize}
 \end{tcolorbox}
 \end{column}
 \end{columns}
 
-\item En veeeel meer! Laten we even hier kijken: \url{https://ctan.org/pkg/fontawesome}
+\item En veeeel meer! %Laten we even hier kijken: \url{https://ctan.org/pkg/fontawesome}
 
 \end{itemize}
 \end{frame}
@@ -594,7 +600,7 @@ Drie onderdelen:
    
    \item Link aangeven naar .bib-bestand in het \LaTeX-bestand zodat de bronnen gevonden kunnen worden.
    
-   \item Verwijzingen in \LaTeX naar die bronnen
+   \item Verwijzingen in \LaTeX\ naar die bronnen
 \end{itemize}
 \end{itemize}
 
@@ -914,15 +920,15 @@ Leuk hondje \includegraphics[width=3cm]{hond.jpg} en poesje \includegraphics[wid
 \begin{itemize}
 \item Stel we willen niet dat onze inhoudsopgave ''Contents'' heet maar anders.
 
-\item We willen dus de titel veranderen van onze table of contents.
+\item We willen dus de titel veranderen van onze \textit{table of contents}.
 
 \item Zoek op Google of je een oplossing van vinden voor dit probleem
 
 
 \pause
-\item Ik heb gezocht op: ''how can I change contents table of latex''
+\item Ik heb gezocht op: ``how can I change contents table of latex''
 \item \small{\url{https://www.google.com/search?q=how+can+I+change+title+table+of+contents++latex}}
-\item En ik vond een antwoord op \url{tex.stackexchange.com}
+\item En ik vond een antwoord op \url{https://tex.stackexchange.com}
 \end{itemize}
 
 \end{frame}
@@ -930,12 +936,23 @@ Leuk hondje \includegraphics[width=3cm]{hond.jpg} en poesje \includegraphics[wid
 \begin{frame}[fragile]{Opdracht: CTAN gebruiken}
 
 \begin{itemize}
-\item Zoek ''MusiXTEX – Sophisticated music typesetting'' op ctan
+\item Zoek ``MusiXTEX – Sophisticated music typesetting'' op CTAN
 
 \item Browse door de documentatie en probeer het volgende toe te voegen aan je overleaf document:
 \end{itemize}
 
 \includegraphics[width=0.8\textwidth]{images/muziek.png}
+
+
+\end{frame}
+
+\begin{frame}[fragile]{Opdracht: CTAN gebruiken}
+
+\begin{itemize}
+\item Zoek ``watermark'' op CTAN
+
+\item Browse door de documentatie en probeer je overleaf document te voorzien met een half transparant watermerk met de tekst ``final''.
+\end{itemize}
 
 
 \end{frame}
