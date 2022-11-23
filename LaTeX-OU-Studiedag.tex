@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[aspectratio=169]{beamer}
 %\documentclass[12pt,t]{beamer}
 %\usepackage[T1]{fontenc}
 %\usepackage[charter,cal=cmcal]{mathdesign}
@@ -26,7 +26,7 @@
 \title{Introductie in \LaTeX}
 \subtitle{Informatica studiedag}
 \author{Niels Doorn}
-\date{2 september 2022}
+\date{26 november 2022}
 \hypersetup{
   pdftitle={Introductie in LaTeX, Informatica studiedag},
   pdfauthor={Niels Doorn},
@@ -36,7 +36,7 @@
 
 \begin{document}
 
-\setbeamertemplate{background canvas}[title frame]
+\setbeamertemplate{background canvas}[title frame 169]
 \begin{frame}[noframenumbering,plain]
   \titlepage
 \end{frame}
@@ -118,7 +118,7 @@ There are \textbf{various} possibilities to \emph{highlight}.
 
 \begin{itemize}
 \item Wetenschappelijk publicaties moeten vaak in \LaTeX
-\item Afstudeerscriptie moet in \LaTeX
+\item Afstudeerscriptie wordt over het algemeen in \LaTeX gemaakt
 \item \LaTeX wordt ondersteund door een actieve gebruikersgroep van duizenden vrijwilligers en professionelen.
 \item Er zijn velen packages om uit te breiden
 \item Het ziet er mooi uit en het kan altijd mooier.
@@ -132,7 +132,7 @@ There are \textbf{various} possibilities to \emph{highlight}.
 
 \begin{figure}
 \centering
-\includegraphics[width=1\textwidth]{images/learningcurve.png}
+\includegraphics[width=0.8\textwidth]{images/learningcurve.png}
 \caption{highly scientific comparison done by Dheepak Krishnamurthy}
 \end{figure}
 
@@ -153,18 +153,13 @@ There are \textbf{various} possibilities to \emph{highlight}.
 \begin{footnotesize}
 \begin{minted}{latex}
 \documentclass[a4]{article}
-
 \title{This is the Title}
 \author{Niels Doorn}
-
 \begin{document}
 \maketitle
-
 \section{Introduction}
 Text text text 
-
 \section{Another section}
-
 \bibliographystyle{plain}
 \bibliography{references}
 \end{document}
@@ -334,11 +329,9 @@ Het belangrijkste teken in een \LaTeX-code: \textbackslash. Daar beginnen alle c
 
   
 \begin{frame}[fragile]{Uit proberen in ons eerste document}
-Maak een document dat er zo uitziet na compilen:
+Maak een document dat er zo uitziet na compileren:
 
-\fbox{\includegraphics[width=0.5\textwidth]{images/gewonedag.jpg}}
-
-
+\fbox{\includegraphics[width=0.4\textwidth]{images/gewonedag.jpg}}
 \end{frame}
  
  
@@ -407,18 +400,13 @@ Er zijn een aantal symbolen die door \LaTeX gereserveerd zijn, zoals bijvoorbeel
 \begin{footnotesize}
 \begin{minted}{latex}
 \documentclass[a4paper]{article}
-
 \title{This is the Title}
 \author{Niels Doorn}
-
 \begin{document}
 \maketitle
-
 \section{Introduction}
 Text text text 
-
 \section{Another section}
-
 \bibliographystyle{plain}
 \bibliography{references}
 \end{document}
@@ -685,7 +673,7 @@ Drie onderdelen:
 \end{frame}
 
 \section{Technische componenten in een document}
-\frame[noframenumbering,plain]{\tableofcontents[currentsection, hideothersubsections, sectionstyle=show/show]}
+\frame[noframenumbering,plain]{\tableofcontents[currentsection]}
 
 \subsection{Wiskunde}
      
@@ -709,7 +697,9 @@ Formule $x^2 -4 = (x + 2)(x-2)$ voor alle $x$.
 Formule $x^2 -4 = (x + 2)(x-2)$ voor alle $x$.
 \end{tcolorbox}
 
-%\medskip\pause\vspace*{0.25cm}\hline\vspace*{0.25cm}
+\end{frame}
+
+\begin{frame}[fragile]{Rekenen en algebra -- voorbeelden}
 
 \begin{tcolorbox}[colback=red!5!white,colframe=red!75!black,title=SOURCE]
 \begin{verbatim}
@@ -868,6 +858,7 @@ for (int i = 0; i < 5; i++) {
 \end{frame}
 
 \section{Plaatjes toevoegen}
+\frame[noframenumbering,plain]{\tableofcontents[currentsection]}
 
 \begin{frame}[fragile]{Plaatjes toevoegen}
 
@@ -887,7 +878,8 @@ Leuk hondje \includegraphics[width=3cm]{hond.jpg}
 
 \end{frame}
 
-
+\section{Bronnen om mee verder te gaan}
+\frame[noframenumbering,plain]{\tableofcontents[currentsection]}
 \begin{frame}[fragile]{Bronnen om verder te gaan}
 
 \begin{itemize}
@@ -904,6 +896,9 @@ Leuk hondje \includegraphics[width=3cm]{hond.jpg}
 \end{itemize}
 
 \end{frame}
+
+\section{Opdracht}
+\frame[noframenumbering,plain]{\tableofcontents[currentsection]}
 
 \begin{frame}[fragile]{Opdracht}
 
@@ -964,7 +959,7 @@ Leuk hondje \includegraphics[width=3cm]{hond.jpg} en poesje \includegraphics[wid
 
 Jullie zijn nu allemaal experts op het gebied van \LaTeX!
 \vspace{0.4cm}\\
-\includegraphics[width=0.8\textwidth]{images/Expert-Linkedin.png}
+\includegraphics[width=0.6\textwidth]{images/Expert-Linkedin.png}
 
 \end{frame}
 
