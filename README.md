@@ -1,4 +1,4 @@
-# Introduction to LaTex
+# Introductie in LaTeX
 
 LaTeX is de de facto standaard voor wetenschappelijke artikelen in de informatica en wiskunde. 
 In LaTeX moet men platte tekst gebruiken, net als in een programmeertaal, om documenten te maken. 
